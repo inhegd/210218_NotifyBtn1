@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin-left: 50px;
+	margin-top: 50px;
+}
+
+span#inboxBtn{
+	display: inline-block;
+	position: relative;/* 모서리로 움직이기 */
+
+	color: #fff;
+	background-color: #555555;
+	font-size: 18px;
+	padding: 12px 24px;
+	border-radius: 2px;
+
+	cursor: pointer; /* 마우스 올리면 손가락 모양 나오는 */
+}
+
+
+span#inboxBtn:hover{
+	background-color: #fe0000;
+}
+
+span#inboxBtn::after{
+	content: "3";
+border: 1px solid #fe0000;
+	display: inline-block;
+	background-color: #fe0000;
+
+	/* ▼원 만드는 공식▼ */
+	width: 24px;
+	height: 24px;
+	border-radius: 12px; /* 위 사이즈의 반값으로 radius 적용 */
+
+	font-size: 16px;
+	text-align: center;
+	line-height: 20px;
+
+	/* 모서리로 움직이기 */
+	position: absolute;
+	right: -10px;
+	top: -10px;
+
+}
+
